@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+---
+<center>
+
+  <h1 style='margin-bottom:0;'>{{ name }}</h1>
+
+  <h2 class="description" style='margin:0;'>{{ desc }}</h2>
+
+  <p class="tags">
+    {% for tag in tags %}
+      {{ tag }}{% if not loop.last %},{% endif %}
+    {% else %}
+      no tags
+    {% endfor %}
+  </p>
+
+  <a href="{{link}}" style="color:blue;">{{link}}</a>
+
+  <div class='content'>
+    <p>
+      {% if content %}
+        {{content | safe}}
+      {% else %}
+        No content.
+      {% endif %}
+    </p>
+  </div>
+
+</center>

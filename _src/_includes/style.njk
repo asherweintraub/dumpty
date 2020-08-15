@@ -1,0 +1,149 @@
+<link rel="stylesheet" href={{config.fontlink}}>
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: {{config.fontname}};
+  }
+
+  body {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+  }
+
+  #filterPanel {
+    height: 0;
+    width: 100vw;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-top: solid white 1px;
+    background-color: black;
+    color: white;
+    transition: height .3s;
+    overflow: hidden;
+  } #filterPanel > a {
+    padding: 10px;
+    border: solid white 2px;
+    border-radius: 2em;
+    display: inline-block;
+    margin: 1%;
+  }
+
+  #list {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  .post {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-bottom: 1px solid black;
+    font-size: 90%;
+  }
+  .post > * {
+    margin: 0;
+    margin-right: .5%;
+    margin-left: .5%;
+  }
+
+  #exPost {
+    background-color: grey;
+    color:white;
+  } #exPost>* {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  a:hover>.post {
+    background-color: whitesmoke;
+  }
+
+  .post>.fas {
+    flex: .5;
+    font-size: 150%;
+  }
+  .post>.name {
+    flex: 2;
+  }
+  .post>.description {
+    flex: 4;
+  }
+  .post>.author {
+    text-align: center;
+    flex: 2;
+  }
+  .post>.tags {
+    flex: 3;
+  }
+  .post>.date {
+    {% if config.dateFormat|length > 2 %}
+    flex: 1.5;
+    {% else %}
+    flex: 1;
+    {% endif %}
+    text-align: right;
+  }
+
+  .description, .tags {
+    font-weight: lighter;
+    font-weight: lighter;
+  }
+
+  #key {
+    position: fixed;
+    bottom: 1vh;
+    left: 1vh;
+    border: 2px solid black;
+    padding: 2%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+  }
+
+  #key>* {
+    margin:0;
+    margin-right: 12px;
+  } #key span>i {
+    margin-right: 6px;
+  }
+
+  .content {
+    width: 80vw;
+    text-align: justify;
+  }
+</style>

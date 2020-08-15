@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{config.title}}</title>
+    <!-- imports style.njk from ./_includes/ -->
+    {% include 'style.njk' %}
+    <script src="https://kit.fontawesome.com/d24e10a1e5.js" crossorigin="anonymous"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    {% include 'header.njk' %}
+    <!-- eleventy will put the content of each template in the layout where it says [[content]] nunjucks has a built in filter, 'safe' that makes the content display like it's supposed to. -->
+    {{ content | safe }}
+  </body>
+  {% include 'scripts.njk' %}
+</html>

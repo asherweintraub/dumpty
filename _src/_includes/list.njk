@@ -1,0 +1,67 @@
+<ol id="list">
+
+  {% if config.showExample %}
+    <li class="post" id='exPost'>
+
+      {% if config.showIcon %}<i class="fas fa-icons"></i>{% endif %}
+
+      {% if config.showName %}<h2 class="name">Name</h2>{% endif %}
+
+      {% if config.showDesc %}<h2 class="description">Description</h2>{% endif %}
+
+      {% if config.showAuth %}<h2 class="author">Author</h2>{% endif %}
+
+      {% if config.showTags %}<h2 class="tags">Tags</h2>{% endif %}
+
+      {% if config.showDate %}<h2 class="date">Date</h2>{% endif %}
+
+    </li>
+  {% endif %}
+
+  {% set taglist = collections[ tag ] %}
+  {% for post in taglist | reverse %}
+
+    <a href="{{post.url if config.toPost else post.data.link}}">
+      <li class="post">
+
+        {% if config.showIcon %}<i class="fas {{ post.data.type | iconPick }}"></i>{% endif %}
+
+        {% if config.showName %}<h2 class="name">{{ post.data.name }}</h2>{% endif %}
+
+        {% if config.showDesc %}<h2 class="description">{{ post.data.desc }}</h2>{% endif %}
+
+        {% if config.showAuth %}<h2 class="author">{{ post.data.author }}</h2>{% endif %}
+
+        {% if config.showTags %}<h2 class="tags">
+          {% for tag in post.data.tags %}
+            {{ tag }}{% if not loop.last %},{% endif %}
+          {% else %}
+            no tags
+          {% endfor %}
+        </h2>{% endif %}
+
+        {% if config.showDate %}<h2 class="date">
+          {% betterDate post.date, config.dateFormat %}
+        </h2>{% endif %}
+
+      </li>
+    </a>
+
+  {% else %}
+
+    <li class="post"><h2>No posts</h2></li>
+
+  {% endfor %}
+
+</ol>
+
+{% if config.showIcon %}
+  {% if config.showKey %}
+    <div id='key'>
+      <p>KEY:</p>
+      {% for icon in config.icons %}
+        <span><i class="fas {{icon.fa}}"></i>{{icon.name}}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endif %}

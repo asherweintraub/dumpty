@@ -1,0 +1,53 @@
+// this is your site's config. play around and see what changes.
+{
+// your site's title
+  title: 'dumpty',
+// font link is what comes after the "href" in a font's stylesheet link
+  fontlink: 'https://use.typekit.net/jsm8idg.css',
+  fontname: 'Aktiv-Grotesk',
+// configure the list of posts
+  showExample: false,
+  showIcon: true,
+  showName: true,
+  showDesc: true,
+  showAuth: true,
+  showTags: true,
+  showDate: true,
+// dateFormat can be any of these codes: https://moment.github.io/luxon/docs/manual/formatting.html#table-of-tokens
+  dateFormat: 'DDD',
+// should clicking a post take you to the post or its link?
+  toPost: true,
+// icons: (this currently only changes what's displayed on the key. Maybe someday it'll interface with the GUI and .eleventy.js)
+  icons: [
+    {
+      name: 'book',
+      fa: 'fa-book'
+    },
+    {
+      name: 'doc',
+      fa: 'fa-file-alt'
+    },
+    {
+      name: 'clip',
+      fa: 'fa-film'
+    },
+    {
+      name: 'vid',
+      fa: 'fa-video'
+    },
+    {
+      name: 'vid2',
+      fa: 'fa-file-video'
+    },
+    {
+      name: 'lecture',
+      fa: 'fa-chalkboard-teacher'
+    },
+    {
+      name: 'other',
+      fa: 'fa-external-link-square-alt'
+    }
+  ],
+// other
+  showKey: true
+}

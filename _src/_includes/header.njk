@@ -1,0 +1,7 @@
+<header>
+  <h1><a href='/'>{{config.title}}</a></h1>
+  <h1 id='filterButt' style='cursor:pointer;'>FILTER</h1>
+</header>
+<div id='filterPanel'>
+  {% for tag in collections.tagList | reverse %}<a href='/tags/{{tag}}'>{{ tag }}</a>{% endfor %}
+</div>
