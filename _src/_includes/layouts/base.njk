@@ -12,6 +12,6 @@
     {% include 'header.njk' %}
     <!-- eleventy will put the content of each template in the layout where it says [[content]] nunjucks has a built in filter, 'safe' that makes the content display like it's supposed to. -->
     {{ content | safe }}
+    {% include 'scripts.njk' %}
   </body>
-  {% include 'scripts.njk' %}
 </html>
