@@ -12,7 +12,7 @@ You can view a live version of dumpty [here](https://dumpty.netlify.app/)
 - [Setup](#setup)
 - [Config](#config)
 - [Posting](#posting)
-- [The End](#that's_it!)
+- [The End](#thats-it)
 
 ---
 
