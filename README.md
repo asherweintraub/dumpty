@@ -1,6 +1,6 @@
 # dumpty
 
-### dumpty is a super barebones eleventy template for dumping cool stuff.
+### dumpty is a barebones eleventy template for dumping cool stuff.
 
 **why '[dumpty](https://media.giphy.com/media/26gshxlHzZv9eNfdC/giphy.gif)'?**
 dump + eleventy = [*dumpty*](https://media.giphy.com/media/3osxYpQ20pysGhUW08/giphy.gif)
