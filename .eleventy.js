@@ -32,6 +32,8 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addDataExtension("json5", contents => JSON5.parse(contents));
 
+  eleventyConfig.addPassthroughCopy("_redirects");
+
   return {
     dir: {
       input: "_src"
